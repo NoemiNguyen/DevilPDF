@@ -112,7 +112,7 @@ if user_question:
 
 with st.sidebar:
     st.title("MENU")
-    pdf_docs = st.file_uploader("Upload your evil document (pdf only lol)", accept_multiple_files=True, type=["pdf"])
+    pdf_docs = st.file_uploader("Upload your evil document (pdf only)", accept_multiple_files=True, type=["pdf"])
 
     if st.button("Analyse"):
         if not pdf_docs: #khi ngta chua up file len
@@ -125,6 +125,3 @@ with st.sidebar:
                     get_vector_store(text_chunks)
                 else:
                     st.error("Check the evil document content again")
-
-
-# Test tinh nang
